@@ -323,6 +323,7 @@
     border: none;
     background-color: #343332;
     color: #dadada;
+    font-family: "Fira Sans";
     cursor: pointer;
   }
 }
