@@ -1,0 +1,377 @@
+/* CSS, mobile first */
+
+/* Utility */
+.rem-size {
+  font-size: 10px;
+}
+.body {
+  margin: 0;
+  font-family: "Fira Sans";
+}
+
+/* Header med nestade block */
+.header {
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+
+  .header__top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    margin: 1.2rem;
+    width: 95px;
+    height: 24px;
+  }
+  .header__title {
+    font-size: 3.6rem;
+    margin: 4.8rem 0 0;
+    text-align: center;
+    @media screen and (min-width: 770px) {
+      font-size: 5.3rem;
+    }
+  }
+  .header__text {
+    font-size: 1.2rem;
+    max-width: 282px;
+    text-align: center;
+    color: #222;
+    opacity: 0.8;
+    @media screen and (min-width: 770px) {
+      max-width: 440px;
+      font-size: 1.6rem;
+    }
+  }
+  .header__nav {
+    display: none;
+    @media screen and (min-width: 770px) {
+      display: block;
+    }
+  }
+  .header__list {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+  .header__link {
+    color: #999;
+    padding: 1.2rem;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 3px;
+    &:hover {
+      color: #555;
+    }
+  }
+  .header__link--active {
+    color: #222;
+  }
+  .header__hamburger-button {
+    margin: 1.2rem;
+    border: 0;
+    @media screen and (min-width: 770px) {
+      display: none;
+    }
+  }
+  .header__button {
+    display: none;
+    @media screen and (min-width: 770px) {
+      display: block;
+      margin: 1.2rem;
+      border: 1px solid #000;
+      border-radius: 3px;
+      padding: 1.2rem 3.6rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+  }
+  .header__apps {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin: 3.6rem;
+  }
+  .header__phone {
+    width: 276px;
+    height: 252px;
+    background-image: url("../img/top-phone.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 2.5rem 1.2rem;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .header__blob {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 150, 0.1);
+    position: absolute;
+  }
+  .header__blob--animate-first {
+    animation: linear blob1 10s infinite;
+  }
+  .header__blob--animate-second {
+    animation: linear blob2 6s infinite reverse;
+  }
+}
+
+/* Header med nestade block */
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1.2rem;
+  gap: 1.2rem;
+  @media screen and (min-width: 770px) {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 80%;
+    margin: auto;
+    gap: 2rem;
+  }
+  .main__title {
+    font-size: 3.6rem;
+    text-align: center;
+    grid-column: span 2;
+    @media screen and (min-width: 770px) {
+      grid-column: span 4;
+      margin: 5rem 0 3.6rem;
+      font-size: 4.42rem;
+    }
+  }
+  .main__product {
+    background-color: #ebebeb;
+  }
+  .main__image {
+    width: 100%;
+  }
+  .main__product-title {
+    text-align: center;
+    font-size: 1.83.6rem;
+    margin: 1.2rem 0 0;
+  }
+  .main__price {
+    font-size: 1.33.6rem;
+    text-align: center;
+    margin: 0 0 1.2rem;
+  }
+  .main__collection {
+    grid-column: span 2;
+    background-color: #343332;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3.6rem 0;
+    margin: 1.2rem 0 0;
+    aspect-ratio: 1 / 0.5;
+    @media screen and (min-width: 375px) {
+      font-size: 2.67rem;
+      margin: 3.6rem 0 0;
+    }
+  }
+  .main__collection-title {
+    margin: 0;
+    font-size: 3.6rem;
+    color: #fff;
+    text-align: center;
+    @media screen and (min-width: 770px) {
+      font-size: 2.67rem;
+    }
+  }
+  .main__collection-time {
+    margin: 0.5rem 0 3.6rem;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .main__collection-button {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    outline: none;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 1.2rem 2.4rem;
+    cursor: pointer;
+
+    background: linear-gradient(
+      0.3turn,
+      #343332 48%,
+      rgba(255, 255, 255, 0.2),
+      #343332 52%
+    );
+    background-size: 200%;
+    background-position: -130px;
+  }
+  .main__collection-button:hover {
+    @media screen and (min-width: 770px) {
+      animation: moveBg linear 0.5s;
+    }
+  }
+}
+
+/* Footer med nestade block */
+.footer {
+  background: url("../img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 14rem;
+  padding: 6.9rem 1.6rem;
+
+  @media screen and (min-width: 770px) {
+    padding: 5.75rem 12rem;
+  }
+  .footer__contact {
+    box-sizing: border-box;
+    width: min(434px, 100%);
+    height: 100%;
+    background-color: #fff;
+    padding: 1.2rem 4.8rem;
+    margin-left: auto;
+  }
+  .footer__title {
+    font-size: 3.6rem;
+    margin: 3.6rem 0;
+  }
+  .footer__text {
+    font-size: 1.8rem;
+    color: #222;
+    opacity: 0.6;
+    font-weight: 400;
+    margin: 0.5rem 0;
+  }
+  .footer__text--big {
+    font-size: 1.8rem;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem 1.2rem;
+    margin: 3.6rem 0;
+    padding: 0 0 3.6rem;
+    box-sizing: border-box;
+    width: min(440px, 100%);
+  }
+  .footer__icon {
+    width: 24px;
+    height: 24px;
+  }
+  .form__input {
+    width: calc(100% - 40px);
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    appearance: textfield;
+    box-sizing: border-box;
+    -moz-appearance: textfield;
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.6);
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+  .form__button {
+    margin: auto;
+    padding: 1.2rem 3.6rem;
+    border-radius: 3px;
+    border: none;
+    background-color: #343332;
+    color: #dadada;
+    cursor: pointer;
+  }
+  .footer__textarea {
+    width: calc(100% - 40px);
+    border: 0;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    border-right: 2px solid rgba(0, 0, 0, 0.3);
+    resize: none;
+    outline: none;
+    font-family: "Fira Sans";
+    box-sizing: border-box;
+    padding: 0.3.6rem;
+    &:focus {
+      border-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+/* Animations for the phone in the header */
+@keyframes blob1 {
+  0% {
+    border-radius: 42% 58% 70% 30% / 34% 30% 70% 66%;
+    left: 1.2rem;
+    top: 3rem;
+  }
+  25% {
+    left: 11.4rem;
+    top: 3.5rem;
+    border-radius: 65% 35% 71% 29% / 41% 74% 26% 59%;
+  }
+  50% {
+    left: 1.2rem;
+    top: 10.2rem;
+    border-radius: 88% 12% 36% 64% / 78% 30% 70% 22%;
+  }
+  75% {
+    left: 11.4rem;
+    top: 3rem;
+    border-radius: 21% 79% 38% 62% / 41% 74% 26% 59%;
+  }
+  100% {
+    left: 1.2rem;
+    top: 3rem;
+    border-radius: 42% 58% 70% 30% / 34% 30% 70% 66%;
+  }
+}
+
+@keyframes blob2 {
+  0% {
+    border-radius: 55% 45% 78% 22% / 41% 14% 86% 59%;
+    left: 11.4rem;
+    top: 10.2rem;
+  }
+  25% {
+    left: 7rem;
+    top: 3rem;
+    border-radius: 87% 13% 83% 17% / 52% 34% 66% 48%;
+  }
+  50% {
+    left: 1.2rem;
+    top: 10.2rem;
+    border-radius: 55% 45% 54% 46% / 41% 74% 26% 59%;
+  }
+  75% {
+    left: 5.5rem;
+    top: 3rem;
+    border-radius: 39% 61% 29% 71% / 30% 76% 24% 70%;
+  }
+  100% {
+    left: 11.4rem;
+    top: 10.2rem;
+    border-radius: 55% 45% 78% 22% / 41% 14% 86% 59%;
+  }
+}
+/* Animation 'glance' when hovering the buttons in main > collection */
+@keyframes moveBg {
+  0% {
+    background-position: -130px;
+  }
+  100% {
+    background-position: 100px;
+  }
+}
