@@ -256,25 +256,38 @@
 
   .footer__form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1.2rem 1.2rem;
     margin: 3.6rem 0;
     padding: 0 0 3.6rem;
     box-sizing: border-box;
     width: min(440px, 100%);
   }
-  .footer__icon {
-    width: 24px;
-    height: 24px;
+
+  .footer__input-container {
+    border-radius: 3px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.6rem;
+    display: flex;
+    align-items: start;
+    gap: 0.6rem;
   }
-  .form__input {
-    width: calc(100% - 40px);
+  .footer__input {
+    background-color: transparent;
     outline: none;
     border: 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 0;
+    border-radius: 3px;
+    font-family: "Fira Sans";
+    color: #333;
+    width: calc(100% - 18px);
     appearance: textfield;
     box-sizing: border-box;
     -moz-appearance: textfield;
+    min-height: 18px;
+    resize: none;
     &:focus {
       border-color: rgba(0, 0, 0, 0.6);
     }
@@ -283,6 +296,25 @@
       -webkit-appearance: none;
       margin: 0;
     }
+    &::placeholder {
+      color: #ccc;
+      opacity: 1; /* Firefox */
+    }
+
+    &::-ms-input-placeholder {
+      /* Edge 12 -18 */
+      color: #ccc;
+    }
+  }
+  .footer__form-icon {
+    width: 18px;
+    fill: none;
+  }
+  .footer__form-icon--fill {
+    fill: #ccc;
+  }
+  .footer__form-icon--stroke {
+    stroke: #ccc;
   }
   .form__button {
     margin: auto;
@@ -292,22 +324,6 @@
     background-color: #343332;
     color: #dadada;
     cursor: pointer;
-  }
-  .footer__textarea {
-    width: calc(100% - 40px);
-    border: 0;
-    border-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    border-right: 2px solid rgba(0, 0, 0, 0.3);
-    resize: none;
-    outline: none;
-    font-family: "Fira Sans";
-    box-sizing: border-box;
-    padding: 0.3.6rem;
-    &:focus {
-      border-color: rgba(0, 0, 0, 0.6);
-    }
   }
 }
 /* Animations for the phone in the header */

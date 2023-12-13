@@ -106,49 +106,123 @@
         <p class="footer__text footer__text--big">We'd love to hear from you</p>
         <p class="footer__text">Use form to send an email to our team</p>
         <form class="footer__form" method="post" action="_self">
-          <img class="footer__icon" src="img/icons/account.svg" />
-          <input
-            class="form__input"
-            type="text"
-            name="name"
-            placeholder="Name"
-            required
-          />
-
-          <img class="footer__icon" src="img/icons/arrow.svg" />
-          <input
-            class="form__input"
-            type="text"
-            name="address"
-            placeholder="Address"
-            required
-          />
-
-          <img class="footer__icon" src="img/icons/phone.svg" />
-          <input
-            class="form__input"
-            type="number"
-            name="phone"
-            placeholder="Phone number"
-          />
-
-          <img class="footer__icon" src="img/icons/mail.svg" />
-          <input
-            class="form__input"
-            type="email"
-            name="email"
-            placeholder="E-mail"
-            required
-          />
-
-          <img class="footer__icon" src="img/icons/message.svg" />
-          <textarea
-            required
-            class="footer__textarea"
-            rows="5"
-            placeholder="Message.."
-          ></textarea>
-
+          <label for="input-name">
+            <div class="footer__input-container">
+              <svg
+                class="footer__form-icon footer__form-icon--fill"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"
+                />
+              </svg>
+              <input
+                class="footer__input"
+                id="input-name"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+              />
+            </div>
+          </label>
+          <label for="input-address">
+            <div class="footer__input-container">
+              <svg
+                class="footer__form-icon footer__form-icon--stroke"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M21 3L3 11.2566H12.375C12.4745 11.2566 12.5698 11.2961 12.6402 11.3664C12.7105 11.4367 12.75 11.5321 12.75 11.6316V21L21 3Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                class="footer__input"
+                id="input-address"
+                type="text"
+                name="address"
+                placeholder="Address"
+                required
+              />
+            </div>
+          </label>
+          <label for="input-phone">
+            <div class="footer__input-container">
+              <svg
+                class="footer__form-icon footer__form-icon--stroke"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M21.1406 17.5313C20.3963 16.7813 18.5934 15.6867 17.7188 15.2456C16.5797 14.6719 16.4859 14.625 15.5906 15.2902C14.9934 15.7341 14.5964 16.1306 13.8975 15.9816C13.1986 15.8325 11.6798 14.992 10.35 13.6664C9.02015 12.3408 8.13093 10.778 7.9814 10.0814C7.83187 9.38485 8.235 8.9925 8.67468 8.39391C9.29437 7.55016 9.2475 7.40953 8.71781 6.27047C8.30484 5.38453 7.17843 3.59859 6.42562 2.85797C5.62031 2.0625 5.62031 2.20313 5.1014 2.41875C4.67895 2.5965 4.27366 2.81255 3.89062 3.06422C3.14062 3.5625 2.72437 3.97641 2.43328 4.59844C2.14218 5.22047 2.0114 6.67875 3.51468 9.40969C5.01796 12.1406 6.07265 13.537 8.25562 15.7139C10.4386 17.8908 12.1172 19.0613 14.5711 20.4375C17.6067 22.1377 18.7711 21.8063 19.395 21.5156C20.0189 21.225 20.4347 20.8125 20.9339 20.0625C21.1862 19.6801 21.4028 19.2753 21.5808 18.8531C21.7969 18.3361 21.9375 18.3361 21.1406 17.5313Z"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                />
+              </svg>
+              <input
+                class="footer__input"
+                id="input-phone"
+                type="number"
+                name="phone"
+                placeholder="Phone number"
+              />
+            </div>
+          </label>
+          <label for="input-email">
+            <div class="footer__input-container">
+              <svg
+                class="footer__form-icon footer__form-icon--stroke"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19.875 4.5H4.125C3.08947 4.5 2.25 5.33947 2.25 6.375V17.625C2.25 18.6605 3.08947 19.5 4.125 19.5H19.875C20.9105 19.5 21.75 18.6605 21.75 17.625V6.375C21.75 5.33947 20.9105 4.5 19.875 4.5Z"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M5.25 7.5L12 12.75L18.75 7.5"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                class="footer__input"
+                id="input-email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </label>
+          <label for="input-message">
+            <div class="footer__input-container">
+              <svg
+                class="footer__form-icon footer__form-icon--fill"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M9 11H18V13H9V11M18 7H6V9H18V7M22 4V22L18 18H4C2.9 18 2 17.11 2 16V4C2 2.9 2.9 2 4 2H20C21.1 2 22 2.89 22 4M20 4H4V16H18.83L20 17.17V4Z"
+                />
+              </svg>
+              <textarea
+                required
+                class="footer__input"
+                id="input-message"
+                rows="5"
+                placeholder="Message.."
+              ></textarea>
+            </div>
+          </label>
           <button class="form__button">Send message</button>
         </form>
       </section>
